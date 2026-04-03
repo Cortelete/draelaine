@@ -12,9 +12,9 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for professional photo */}
+              {/* Professional photo */}
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                src="/foto.png" 
                 alt="Dra. Elaine Ferreira" 
                 className="w-full h-full object-cover" 
               />

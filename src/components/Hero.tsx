@@ -7,7 +7,7 @@ export default function Hero({ openModal }: { openModal: (m: string) => void }) 
     <section id="inicio" className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-[#faf9f6]">
       {/* Background Watermark */}
       <div className="absolute left-[-15%] top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
-        <img src="/logo.png" alt="" className="w-[800px] h-[800px] object-contain" />
+        <img src="/iniciais.png" alt="" className="w-[800px] h-[800px] object-contain" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center px-4 max-w-4xl mx-auto text-center">
@@ -17,7 +17,7 @@ export default function Hero({ openModal }: { openModal: (m: string) => void }) 
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <CoinLogo src="/logo.png" alt="Logo Dra. Elaine Ferreira" />
+          <CoinLogo src="/iniciais.png" alt="Logo Dra. Elaine Ferreira" />
         </motion.div>
 
         <motion.h1 
