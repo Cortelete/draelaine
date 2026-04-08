@@ -8,7 +8,7 @@ interface ModalsProps {
   openModal: (modalName: string) => void;
 }
 
-const WHATSAPP_NUMBER = "5541988710303"; // Replace with actual client number later, using dev number for now as requested for developer, but client needs one too. Prompt says "para o número específico do whatsapp em uma mensagem personalizada". I will use the dev number for dev modal, and a placeholder or the same for client until specified. Actually, I'll use a placeholder for client. Let's use 5541900000000.
+const WHATSAPP_NUMBER = "5524998188957"; // Dra. Elaine Ferreira's official WhatsApp number
 
 export default function Modals({ activeModal, closeModal, openModal }: ModalsProps) {
   if (!activeModal) return null;
@@ -153,7 +153,7 @@ function ScheduleModal({ closeModal, prefilledService }: { closeModal: () => voi
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Olá! Gostaria de agendar um atendimento.%0A%0A*Nome:* ${formData.name}%0A*Idade:* ${formData.age}%0A*Serviço de interesse:* ${formData.type}%0A*Motivo:* ${formData.reason}`;
-    window.open(`https://wa.me/5541900000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
     closeModal();
   };
 
@@ -217,7 +217,7 @@ function ContactModal({ closeModal }: { closeModal: () => void }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Olá! Gostaria de entrar em contato.%0A%0A*Nome:* ${formData.name}%0A*Idade:* ${formData.age}%0A*Motivo do contato:* ${formData.reason}`;
-    window.open(`https://wa.me/5541900000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
     closeModal();
   };
 
