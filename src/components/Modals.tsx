@@ -8,7 +8,7 @@ interface ModalsProps {
   openModal: (modalName: string) => void;
 }
 
-const WHATSAPP_NUMBER = "5524998188957"; // Dra. Elaine Ferreira's official WhatsApp number
+const WHATSAPP_NUMBER = "554298188957"; // Dra. Elaine Ferreira's official WhatsApp number
 
 export default function Modals({ activeModal, closeModal, openModal }: ModalsProps) {
   if (!activeModal) return null;
