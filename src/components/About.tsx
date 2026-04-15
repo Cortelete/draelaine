@@ -11,12 +11,12 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="rounded-2xl overflow-hidden shadow-2xl flex justify-center bg-white">
               {/* Professional photo */}
               <img 
                 src="/foto.png" 
                 alt="Dra. Elaine Ferreira" 
-                className="w-full h-full object-cover" 
+                className="w-full h-auto max-h-[600px] object-contain object-top" 
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-100 rounded-full -z-10"></div>
