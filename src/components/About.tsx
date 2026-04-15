@@ -9,14 +9,14 @@ export default function About() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="relative"
+            className="relative w-fit mx-auto"
           >
-            <div className="rounded-2xl overflow-hidden shadow-2xl flex justify-center bg-white">
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
               {/* Professional photo */}
               <img 
                 src="/foto.png" 
                 alt="Dra. Elaine Ferreira" 
-                className="w-full h-auto max-h-[600px] object-contain object-top" 
+                className="w-auto h-auto max-w-full max-h-[600px]" 
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-100 rounded-full -z-10"></div>
