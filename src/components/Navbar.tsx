@@ -18,21 +18,21 @@ export default function Navbar({ openModal }: { openModal: (m: string) => void }
         <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
           <span className="font-serif font-semibold text-gray-900 tracking-widest text-sm sm:text-base hidden sm:block">
-            DRA. ELAINE FERREIRA
+            PSICÓLOGA ELAINE FERREIRA
           </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-gray-600">
-          <a href="#inicio" className="hover:text-gold-500 transition-colors">INÍCIO</a>
-          <a href="#sobre" className="hover:text-gold-500 transition-colors">SOBRE</a>
-          <a href="#atuacao" className="hover:text-gold-500 transition-colors">ATUAÇÃO</a>
-          <button onClick={() => openModal('contact')} className="hover:text-gold-500 transition-colors uppercase tracking-widest">Contato</button>
+          <a href="#inicio" className="hover:text-brand-500 transition-colors">INÍCIO</a>
+          <a href="#sobre" className="hover:text-brand-500 transition-colors">SOBRE</a>
+          <a href="#atuacao" className="hover:text-brand-500 transition-colors">ATUAÇÃO</a>
+          <button onClick={() => openModal('contact')} className="hover:text-brand-500 transition-colors uppercase tracking-widest">Contato</button>
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
           <button 
             onClick={() => openModal('schedule')}
-            className="btn-gold-metallic text-white px-6 py-2.5 rounded text-xs font-bold tracking-wider transition-all hover:-translate-y-0.5"
+            className="btn-primary text-white px-6 py-2.5 rounded text-xs font-bold tracking-wider transition-all hover:-translate-y-0.5"
           >
             AGENDAR CONSULTA
           </button>
@@ -61,7 +61,7 @@ export default function Navbar({ openModal }: { openModal: (m: string) => void }
               <div className="pt-4 border-t border-gray-100">
                 <button 
                   onClick={() => { openModal('schedule'); setMobileMenuOpen(false); }}
-                  className="w-full bg-gold-500 text-white px-4 py-3 rounded text-sm font-bold tracking-widest text-center"
+                  className="w-full bg-brand-500 text-white px-4 py-3 rounded text-sm font-bold tracking-widest text-center"
                 >
                   AGENDAR CONSULTA
                 </button>

@@ -8,7 +8,7 @@ interface ModalsProps {
   openModal: (modalName: string) => void;
 }
 
-const WHATSAPP_NUMBER = "554298188957"; // Dra. Elaine Ferreira's official WhatsApp number
+const WHATSAPP_NUMBER = "554298188957"; // Psicóloga Elaine Ferreira's official WhatsApp number
 
 export default function Modals({ activeModal, closeModal, openModal }: ModalsProps) {
   if (!activeModal) return null;
@@ -47,7 +47,7 @@ export default function Modals({ activeModal, closeModal, openModal }: ModalsPro
               {activeModal?.startsWith('service_') && <ServiceModal serviceId={activeModal} closeModal={closeModal} openModal={openModal} />}
               {activeModal === 'facebook_construction' && (
                 <div className="text-center py-8">
-                  <h2 className="text-2xl font-bold text-gradient-gold mb-4">Em Construção</h2>
+                  <h2 className="text-2xl font-bold text-gradient-brand mb-4">Em Construção</h2>
                   <p className="text-gray-600">Nossa página do Facebook estará disponível em breve!</p>
                 </div>
               )}
@@ -107,21 +107,21 @@ function ServiceModal({ serviceId, closeModal, openModal }: { serviceId: string,
 
   return (
     <div className="text-left">
-      <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mb-6 border border-gold-100">
-        <Star className="w-8 h-8 text-gold-500" />
+      <div className="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 border border-brand-100">
+        <Star className="w-8 h-8 text-brand-500" />
       </div>
       <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">{service.title}</h2>
       
       <div className="space-y-6">
         <div>
-          <h3 className="text-sm font-bold text-gold-600 uppercase tracking-wider mb-2">Sobre o Serviço</h3>
+          <h3 className="text-sm font-bold text-brand-600 uppercase tracking-wider mb-2">Sobre o Serviço</h3>
           <p className="text-gray-600 leading-relaxed">{service.desc}</p>
         </div>
         
         <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 relative overflow-hidden">
-          <div className="absolute left-0 top-0 w-1 h-full bg-gold-400"></div>
+          <div className="absolute left-0 top-0 w-1 h-full bg-brand-400"></div>
           <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-gold-500" /> Exemplo Prático
+            <CheckCircle2 className="w-4 h-4 text-brand-500" /> Exemplo Prático
           </h3>
           <p className="text-gray-600 text-sm leading-relaxed italic">
             "{service.example}"
@@ -134,7 +134,7 @@ function ServiceModal({ serviceId, closeModal, openModal }: { serviceId: string,
           closeModal();
           setTimeout(() => openModal(`schedule|${encodeURIComponent(service.title)}`), 300);
         }}
-        className="w-full mt-8 py-3 btn-gold-metallic text-white font-semibold rounded-xl transition-all"
+        className="w-full mt-8 py-3 btn-primary text-white font-semibold rounded-xl transition-all"
       >
         Entendi, quero agendar
       </button>
@@ -159,21 +159,21 @@ function ScheduleModal({ closeModal, prefilledService }: { closeModal: () => voi
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gradient-gold mb-2">Agende seu atendimento</h2>
-      <p className="text-sm text-gradient-gold mb-6">Dê o primeiro passo para cuidar de você. Preencha os dados abaixo para agilizarmos seu atendimento.</p>
+      <h2 className="text-2xl font-bold text-gradient-brand mb-2">Agende seu atendimento</h2>
+      <p className="text-sm text-gradient-brand mb-6">Dê o primeiro passo para cuidar de você. Preencha os dados abaixo para agilizarmos seu atendimento.</p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-          <input required type="text" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+          <input required type="text" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Idade</label>
-          <input required type="number" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all" value={formData.age} onChange={e => setFormData({...formData, age: e.target.value})} />
+          <input required type="number" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all" value={formData.age} onChange={e => setFormData({...formData, age: e.target.value})} />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Serviço de interesse</label>
-          <select required className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all bg-white" value={formData.type} onChange={e => setFormData({...formData, type: e.target.value})}>
+          <select required className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all bg-white" value={formData.type} onChange={e => setFormData({...formData, type: e.target.value})}>
             <option value="">Selecione...</option>
             <option value="Avaliação Neuropsicológica">Avaliação Neuropsicológica</option>
             <option value="Psicoterapia">Psicoterapia</option>
@@ -187,7 +187,7 @@ function ScheduleModal({ closeModal, prefilledService }: { closeModal: () => voi
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Motivo (breve relato)</label>
-          <textarea required rows={3} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all resize-none" value={formData.reason} onChange={e => setFormData({...formData, reason: e.target.value})}></textarea>
+          <textarea required rows={3} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all resize-none" value={formData.reason} onChange={e => setFormData({...formData, reason: e.target.value})}></textarea>
         </div>
         
         <div className="pt-4">
@@ -203,7 +203,7 @@ function ScheduleModal({ closeModal, prefilledService }: { closeModal: () => voi
           </ul>
         </div>
 
-        <button type="submit" className="w-full py-3 btn-gold-metallic text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+        <button type="submit" className="w-full py-3 btn-primary text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
           <Send className="w-4 h-4" /> Enviar para WhatsApp
         </button>
       </form>
@@ -223,24 +223,24 @@ function ContactModal({ closeModal }: { closeModal: () => void }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gradient-gold mb-2">Fale Conosco</h2>
-      <p className="text-sm text-gradient-gold mb-6">Preencha os dados abaixo para iniciarmos nossa conversa.</p>
+      <h2 className="text-2xl font-bold text-gradient-brand mb-2">Fale Conosco</h2>
+      <p className="text-sm text-gradient-brand mb-6">Preencha os dados abaixo para iniciarmos nossa conversa.</p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-          <input required type="text" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+          <input required type="text" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Idade</label>
-          <input required type="number" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all" value={formData.age} onChange={e => setFormData({...formData, age: e.target.value})} />
+          <input required type="number" className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all" value={formData.age} onChange={e => setFormData({...formData, age: e.target.value})} />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Motivo do contato</label>
-          <textarea required rows={4} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all resize-none" value={formData.reason} onChange={e => setFormData({...formData, reason: e.target.value})}></textarea>
+          <textarea required rows={4} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all resize-none" value={formData.reason} onChange={e => setFormData({...formData, reason: e.target.value})}></textarea>
         </div>
         
-        <button type="submit" className="w-full py-3 mt-4 btn-gold-metallic text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+        <button type="submit" className="w-full py-3 mt-4 btn-primary text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
           <Send className="w-4 h-4" /> Confirmar e Enviar
         </button>
       </form>
@@ -251,9 +251,9 @@ function ContactModal({ closeModal }: { closeModal: () => void }) {
 function LocationModal() {
   return (
     <div className="flex flex-col h-full">
-      <h2 className="text-2xl font-bold text-gradient-gold mb-2">Nossa Localização</h2>
-      <p className="text-sm text-gradient-gold mb-4 flex items-start gap-2">
-        <MapPin className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+      <h2 className="text-2xl font-bold text-gradient-brand mb-2">Nossa Localização</h2>
+      <p className="text-sm text-gradient-brand mb-4 flex items-start gap-2">
+        <MapPin className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" />
         <span>Edifício Clinical Tower - R. Cel. Dulcídio, 1317 - 5º andar, sala 58 - Centro, Ponta Grossa - PR, 84010-280</span>
       </p>
       
@@ -273,7 +273,7 @@ function LocationModal() {
         href="https://maps.app.goo.gl/YOUR_LINK_HERE" // Replace with actual maps link if needed, or just use a generic search
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full py-3 btn-gold-metallic text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 mt-auto"
+        className="w-full py-3 btn-primary text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 mt-auto"
       >
         Abrir no Google Maps <ChevronRight className="w-4 h-4" />
       </a>
@@ -327,12 +327,12 @@ function ReviewModal({ closeModal }: { closeModal: () => void }) {
           <textarea 
             required 
             rows={4} 
-            className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all resize-none mb-4" 
+            className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all resize-none mb-4" 
             placeholder="Sua mensagem..."
             value={feedback} 
             onChange={e => setFeedback(e.target.value)}
           ></textarea>
-          <button type="submit" className="w-full py-3 btn-gold-metallic text-white font-semibold rounded-xl transition-all">
+          <button type="submit" className="w-full py-3 btn-primary text-white font-semibold rounded-xl transition-all">
             Enviar Feedback
           </button>
         </form>
@@ -342,8 +342,8 @@ function ReviewModal({ closeModal }: { closeModal: () => void }) {
 
   return (
     <div className="text-center py-4">
-      <h2 className="text-2xl font-bold text-gradient-gold mb-2">Avalie nosso atendimento</h2>
-      <p className="text-sm text-gradient-gold mb-8">Sua opinião é muito importante para nós!</p>
+      <h2 className="text-2xl font-bold text-gradient-brand mb-2">Avalie nosso atendimento</h2>
+      <p className="text-sm text-gradient-brand mb-8">Sua opinião é muito importante para nós!</p>
       
       <div className="flex justify-center gap-2 mb-8">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -358,7 +358,7 @@ function ReviewModal({ closeModal }: { closeModal: () => void }) {
             <Star 
               className={`w-10 h-10 sm:w-12 sm:h-12 ${
                 star <= (hover || rating) 
-                  ? 'fill-gold-400 text-gold-400' 
+                  ? 'fill-brand-400 text-brand-400' 
                   : 'text-gray-300'
               } transition-colors duration-200`} 
             />
@@ -374,7 +374,7 @@ function DeveloperModal({ closeModal }: { closeModal: () => void }) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Olá, meu nome é ${clientName}. Vi o site da Dra. Elaine Ferreira Machado e gostaria de ter um site elegante e moderno como o dela!`;
+    const text = `Olá, meu nome é ${clientName}. Vi o site da Psicóloga Elaine Ferreira Machado e gostaria de ter um site elegante e moderno como o dela!`;
     window.open(`https://wa.me/5541988710303?text=${text}`, '_blank');
     closeModal();
   };
@@ -382,7 +382,7 @@ function DeveloperModal({ closeModal }: { closeModal: () => void }) {
   return (
     <div className="text-center">
       <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl flex items-center justify-center mb-6 shadow-lg transform rotate-3">
-        <Code className="w-10 h-10 text-gold-400" />
+        <Code className="w-10 h-10 text-brand-400" />
       </div>
       
       <h2 className="text-2xl font-serif font-bold text-gray-900 mb-2">InteligenciArte.IA</h2>
@@ -399,7 +399,7 @@ function DeveloperModal({ closeModal }: { closeModal: () => void }) {
             required 
             type="text" 
             placeholder="Seu nome"
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none transition-all mb-3 bg-white" 
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-400 focus:border-transparent outline-none transition-all mb-3 bg-white" 
             value={clientName} 
             onChange={e => setClientName(e.target.value)} 
           />

@@ -19,7 +19,7 @@ export default function App() {
   const closeModal = () => setActiveModal(null);
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] font-sans text-gray-800 overflow-x-hidden selection:bg-gold-200 selection:text-gray-900">
+    <div className="min-h-screen bg-[#faf9f6] font-sans text-gray-800 overflow-x-hidden selection:bg-accent-200 selection:text-gray-900">
       <Navbar openModal={openModal} />
       
       <main>

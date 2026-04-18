@@ -15,19 +15,19 @@ export default function LinkButton({ icon, title, subtitle, onClick, href, exter
   const content = (
     <div className={`relative flex items-center p-4 sm:p-5 w-full rounded-2xl overflow-hidden transition-all duration-300 ${
       primary 
-        ? 'bg-white border border-gold-300 shadow-lg' 
+        ? 'bg-white border border-brand-300 shadow-lg' 
         : 'bg-white/80 backdrop-blur-sm border border-white/50 shadow-md'
     }`}>
       {/* Icon container */}
       <div className={`absolute left-4 sm:left-5 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full ${
-        primary ? 'bg-gold-50' : 'bg-gray-50'
+        primary ? 'bg-brand-50' : 'bg-gray-50'
       }`}>
         {icon}
       </div>
       
       {/* Text container */}
       <div className="w-full text-center pl-12 sm:pl-16 pr-4">
-        <h3 className={`text-sm sm:text-base font-semibold ${primary ? 'text-gold-600' : 'text-gray-800'}`}>
+        <h3 className={`text-sm sm:text-base font-semibold ${primary ? 'text-brand-600' : 'text-gray-800'}`}>
           {title}
         </h3>
         {subtitle && (

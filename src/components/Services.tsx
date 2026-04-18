@@ -17,7 +17,7 @@ export default function Services({ openModal }: { openModal: (m: string) => void
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Áreas de Atuação</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-brand-300 via-brand-500 to-brand-300 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,9 +29,9 @@ export default function Services({ openModal }: { openModal: (m: string) => void
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: idx * 0.1 }}
               onClick={() => openModal(`service_${idx}`)}
-              className="p-8 border border-gray-100 rounded-2xl hover:shadow-xl hover:border-gold-300 transition-all bg-[#faf9f6] group cursor-pointer"
+              className="p-8 border border-gray-100 rounded-2xl hover:shadow-xl hover:border-brand-300 transition-all bg-[#faf9f6] group cursor-pointer"
             >
-              <service.icon className="w-10 h-10 text-gold-500 mb-6 group-hover:scale-110 transition-transform" />
+              <service.icon className="w-10 h-10 text-brand-500 mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-gray-900 mb-3 font-serif">{service.title}</h3>
               <p className="text-gray-600">{service.desc}</p>
             </motion.div>

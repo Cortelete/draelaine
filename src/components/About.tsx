@@ -15,12 +15,12 @@ export default function About() {
               {/* Professional photo */}
               <img 
                 src="/foto.png" 
-                alt="Dra. Elaine Ferreira" 
+                alt="Elaine Ferreira" 
                 className="w-auto h-auto max-w-full max-h-[600px]" 
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-100 rounded-full -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-gold-200 rounded-full -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-100 rounded-full -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-brand-200 rounded-full -z-10"></div>
           </motion.div>
 
           <motion.div
@@ -29,7 +29,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sobre a Profissional</h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300 mb-8 rounded-full"></div>
+            <div className="w-16 h-1 bg-gradient-to-r from-brand-300 via-brand-500 to-brand-300 mb-8 rounded-full"></div>
             
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -38,7 +38,7 @@ export default function About() {
               <p>
                 Seu trabalho é baseado em uma escuta atenta e acolhedora, oferecendo um espaço seguro para que cada pessoa possa se expressar, se compreender melhor e desenvolver novas formas de lidar com seus desafios.
               </p>
-              <blockquote className="p-6 bg-white border-l-4 border-gold-500 shadow-sm italic text-gray-700">
+              <blockquote className="p-6 bg-white border-l-4 border-brand-500 shadow-sm italic text-gray-700">
                 "Com atendimentos personalizados, busco auxiliar no fortalecimento emocional, promovendo mais equilíbrio, clareza e qualidade de vida."
               </blockquote>
             </div>
