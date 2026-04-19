@@ -20,7 +20,7 @@ export default function Services({ openModal }: { openModal: (m: string) => void
           <div className="w-24 h-1 bg-gradient-to-r from-brand-300 via-brand-500 to-brand-300 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {services.map((service, idx) => (
             <motion.div 
               key={idx}
@@ -29,11 +29,13 @@ export default function Services({ openModal }: { openModal: (m: string) => void
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: idx * 0.1 }}
               onClick={() => openModal(`service_${idx}`)}
-              className="p-8 border border-gray-100 rounded-2xl hover:shadow-xl hover:border-brand-300 transition-all bg-[#faf9f6] group cursor-pointer"
+              className={`p-4 sm:p-6 border border-gray-100 rounded-2xl hover:shadow-xl hover:border-brand-300 transition-all bg-[#faf9f6] group cursor-pointer flex flex-col ${
+                idx === 6 ? 'col-span-2 lg:col-span-2' : ''
+              }`}
             >
-              <service.icon className="w-10 h-10 text-brand-500 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3 font-serif">{service.title}</h3>
-              <p className="text-gray-600">{service.desc}</p>
+              <service.icon className="w-8 h-8 sm:w-10 sm:h-10 text-brand-500 mb-3 sm:mb-5 group-hover:scale-110 transition-transform shrink-0" />
+              <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-2 font-serif leading-tight">{service.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-600">{service.desc}</p>
             </motion.div>
           ))}
         </div>
