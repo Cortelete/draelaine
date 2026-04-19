@@ -16,8 +16,7 @@ export default function Navbar({ openModal }: { openModal: (m: string) => void }
     <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
-          <span className="font-serif font-semibold text-gray-900 tracking-widest text-sm sm:text-base hidden sm:block">
+          <span className="font-serif font-semibold text-gray-900 tracking-widest text-sm sm:text-base">
             PSICÓLOGA ELAINE FERREIRA
           </span>
         </a>

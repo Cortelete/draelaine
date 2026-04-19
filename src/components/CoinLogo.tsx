@@ -30,7 +30,7 @@ export default function CoinLogo({ src, alt }: CoinLogoProps) {
 
   return (
     <motion.div
-      className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 cursor-pointer perspective-1000"
+      className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 cursor-pointer perspective-1000"
       onClick={() => setClicks(c => c + 1)}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
